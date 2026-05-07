@@ -1,1 +1,3 @@
 *.sqlite*
+public/storage
+storage/app/public

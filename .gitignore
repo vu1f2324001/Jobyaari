@@ -26,3 +26,5 @@ Thumbs.db
 *.sqlite3
 database.sqlite
 /upload
+/public/storage
+/storage/app/public
