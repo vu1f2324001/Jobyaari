@@ -34,16 +34,15 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-di
 # Install Node dependencies and build frontend assets
 RUN npm install && npm run build
 
-# Ensure required Laravel directories exist before setting permissions
-RUN mkdir -p /var/www/storage/framework/cache/data \
-    /var/www/storage/framework/sessions \
-    /var/www/storage/framework/views \
-    /var/www/storage/logs \
-    /var/www/bootstrap/cache
+# Ensure required directories exist
+RUN mkdir -p storage/framework/cache/data \
+    storage/framework/sessions \
+    storage/framework/views \
+    storage/logs \
+    bootstrap/cache
 
-# Set the correct permissions for Laravel's cache and storage
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache \
-    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+# FIXED permissions (NO chown)
+RUN chmod -R 775 storage bootstrap/cache
 
 # Expose the port Render expects
 EXPOSE 10000
