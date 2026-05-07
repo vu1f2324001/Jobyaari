@@ -1,13 +1,12 @@
 FROM php:8.2-cli
 
+# Install system dependencies and PHP extensions in a single layer to improve caching and avoid potential cache corruption.
 RUN apt-get update && apt-get install -y \
     git curl unzip zip \
     libpng-dev libonig-dev libxml2-dev libzip-dev \
     libpq-dev \
     nodejs npm \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN docker-php-ext-install \
+    && docker-php-ext-install \
     pdo \
     pdo_mysql \
     pdo_pgsql \
@@ -16,7 +15,8 @@ RUN docker-php-ext-install \
     pcntl \
     bcmath \
     gd \
-    zip
+    zip \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
