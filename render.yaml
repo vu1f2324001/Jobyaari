@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: jobyaari
+    env: docker
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://jobyaari.onrender.com # Update with your custom domain later if needed
+      - key: APP_KEY
+        generateValue: true
+      - key: DB_CONNECTION
+        value: mysql
+      # You will add DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD 
+      # directly in the Render dashboard for security!
+      - key: PORT
+        value: 10000

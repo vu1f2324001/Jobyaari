@@ -1,0 +1,19 @@
+# Version control
+.git
+.gitignore
+
+# Environment variables (NEVER copy local .env to production)
+.env
+.env.*
+
+# Dependencies (Docker will install its own inside the container)
+vendor/
+node_modules/
+
+# Local Storage and Caches
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+public/storage
+public/hot
