@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libzip-dev \
     zip \
+    nodejs \
+    npm \
     unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
@@ -28,6 +30,16 @@ COPY . /var/www
 
 # Install project dependencies safely for production
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+
+# Install Node dependencies and build frontend assets
+RUN npm install && npm run build
+
+# Ensure required Laravel directories exist before setting permissions
+RUN mkdir -p /var/www/storage/framework/cache/data \
+    /var/www/storage/framework/sessions \
+    /var/www/storage/framework/views \
+    /var/www/storage/logs \
+    /var/www/bootstrap/cache
 
 # Set the correct permissions for Laravel's cache and storage
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache \
