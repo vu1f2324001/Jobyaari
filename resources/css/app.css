@@ -1,0 +1,51 @@
+/* Modern portal look */
+:root{
+  --brand:#0d6efd;
+  --bg:#0b1220;
+}
+
+body{
+  background: linear-gradient(180deg, #070b14 0%, #0b1220 100%);
+  color:#e9eefc;
+}
+
+.hero-card{
+  background: linear-gradient(135deg, rgba(13,110,253,.95) 0%, rgba(13,110,253,.35) 55%, rgba(13,110,253,.15) 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+}
+
+.ajax-spinner{
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1050;
+}
+
+.card{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  color: #e9eefc;
+}
+
+.card a{
+  color: inherit;
+}
+
+.blog-card-img{
+  width:100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.35rem .75rem;
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+}
