@@ -234,6 +234,6 @@ This project is open-source and licensed under the MIT License.
 ### 👨‍💻 Author
 
 **Akshada**
-- GitHub: @https://github.com/vu1f2324001
+- GitHub: https://github.com/vu1f2324001
 
 Made with ❤️ and code.
