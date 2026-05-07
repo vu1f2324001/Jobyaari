@@ -82,7 +82,13 @@ Make sure you have [Composer](<https://getcomposer.org/)> installed.
 composer install
 ```
 
-### 3. Environment Setup
+### 🧪 Environment Setup
+
+- PHP 8.2+
+- MySQL
+- Composer
+- Node (only for assets)
+
 Create your environment file by copying the example.
 ```bash
 cp .env.example .env
@@ -156,6 +162,14 @@ This application heavily uses AJAX to provide a fast, modern user experience, es
 - **Dynamic Data Tables:** The blog and category lists are fetched from the API and rendered on the client-side with jQuery. This allows for instant updates after creating, editing, or deleting an item.
 - **Client-Side Actions:** All CRUD operations (Create, Update, Delete) are performed by making API calls in the background. The UI is then updated dynamically to reflect the changes without a full page reload.
 
+
+### ⚙️ Security Notes
+
+- .env is never committed
+- storage is symlinked locally only
+- API secured with middleware
+
+
 ## 🛡️ Security Features
 
 - **CSRF Protection:** While the API is stateless, standard Laravel web routes are protected.
@@ -220,6 +234,6 @@ This project is open-source and licensed under the MIT License.
 ### 👨‍💻 Author
 
 **Akshada**
-- GitHub: @vu1f23224001
+- GitHub: @https://github.com/vu1f2324001
 
 Made with ❤️ and code.
