@@ -144,7 +144,7 @@ The application will be available at `http://127.0.0.1:8000`.
 **Blog Editor**
 !Blog Editor Screenshot
 
-## � Admin Login
+## 🔐 Admin Login
 
 To access the admin panel, navigate to `/admin/login`.
 
@@ -178,7 +178,7 @@ This application heavily uses AJAX to provide a fast, modern user experience, es
 - **Cross-Site Scripting (XSS) Prevention:** User input is escaped before being rendered in Blade templates. The API returns JSON, and the frontend script properly handles data to prevent XSS.
 - **Authentication Middleware:** Admin API routes are protected by Laravel Sanctum's authentication middleware, ensuring only logged-in admins can access them.
 
-## � Deployment
+## 🚀 Deployment
 
 Here are some guidelines for deploying the application.
 
