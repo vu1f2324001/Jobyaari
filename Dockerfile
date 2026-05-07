@@ -2,7 +2,7 @@ FROM php:8.2-cli
 
 # Install system dependencies and PHP extensions in a single layer to improve caching and avoid potential cache corruption.
 
-ARG CACHEBUST=2
+ARG CACHEBUST=3
 RUN apt-get update && apt-get install -y \
     git curl unzip zip \
     libpng-dev libonig-dev libxml2-dev libzip-dev \

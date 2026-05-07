@@ -18,10 +18,13 @@ class DatabaseSeeder extends Seeder
     {
         // Default Categories add kara
         $categories = [
-            ['name' => 'IT Jobs', 'slug' => 'it-jobs'],
-            ['name' => 'Government Jobs', 'slug' => 'government-jobs'],
-            ['name' => 'Work from Home', 'slug' => 'work-from-home'],
-            ['name' => 'Marketing', 'slug' => 'marketing'],
+            ['name' => 'Admit Card', 'slug' => 'admit-card'],
+            ['name' => 'Answer Key', 'slug' => 'answer-key'],
+            ['name' => 'Calender', 'slug' => 'calender'],
+            ['name' => 'EXAM DATE', 'slug' => 'exam-date'],
+            ['name' => 'Information', 'slug' => 'information'],
+            ['name' => 'Jobs', 'slug' => 'jobs'],
+            ['name' => 'Result', 'slug' => 'result'],
         ];
 
         foreach ($categories as $category) {
