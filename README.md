@@ -21,7 +21,7 @@ Job Yaari is a content management system focused on simplicity and efficiency. I
 - 🗂️ **Filter by Category:** Browse posts by specific categories.
 - 📅 **Filter by Date:** Find posts from a particular date.
 - 📖 **Related Blogs:** See other posts from the same category on the blog detail page.
-- 📱 **Responsive Design:** Great reading experience on desktop, tablets, and mobile devices.
+- 📱 **Responsive Design:** Great reading experience on desktop, tablets, and mobile devices. 
 
 **Admin Panel:**
 - 🔐 **Secure Token-Based Auth:** Admin access is protected via a login and Bearer token.
